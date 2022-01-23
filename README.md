@@ -1,4 +1,14 @@
-# StaticPoc
+# Jamstack POC
+
+This is a proof of concept (POC) to demonstrate some capabilities and limitations of a static site (Jamstack).
+
+The goal is to create a site that can:
+
+- Be deployed as a static site on a PaaS (Netlify/Heroku/Vercel)
+- Submit to an API without exposing API credentials on the client side
+- Implement feature flags to toggle a UI element
+
+---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
 
