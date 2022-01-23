@@ -8,6 +8,11 @@ The goal is to create a site that can:
 - Submit to an API without exposing API credentials on the client side
 - Implement feature flags to toggle a UI element
 
+## Resources
+
+- [Connect Angular to Netlify](https://www.netlify.com/blog/2019/09/23/first-steps-using-netlify-and-angular/)
+- [Feature Flag LaunchDarkly + Netlify](https://www.netlify.com/blog/2021/10/27/how-to-use-launchdarkly-feature-flags-with-netlify/)
+
 ---
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
