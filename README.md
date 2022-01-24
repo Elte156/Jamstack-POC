@@ -2,16 +2,80 @@
 
 This is a proof of concept (POC) to demonstrate some capabilities and limitations of a static site (Jamstack).
 
+POC Demo: https://elte156-static-poc.netlify.app
+
 The goal is to create a site that can:
 
 - Be deployed as a static site on a PaaS (Netlify/Heroku/Vercel)
 - Submit to an API without exposing API credentials on the client side
 - Implement feature flags to toggle a UI element
 
+## Features
+
+### Netlify Integration
+
+Currently using [Netlify](https://www.netlify.com/) as the selected PaaS.
+
+### Serverless Functions
+
+This single page application has two buttons available on the index page: `Get Time` and `Get a Pokemon`.
+
+- `Get Time` will make a HTTP GET request to a serverless function to return the current time in UTC.
+- `Get a Pokemon` will make a HTTP GET request a serverless function (that acts as a proxy) which in turn calls [PokeAPI](https://pokeapi.co/) for a random Pokemon name. This proxy could easily store sensitive API credentials if needed.
+
+### Feature Flags
+
+TBD
+
 ## Resources
 
 - [Connect Angular to Netlify](https://www.netlify.com/blog/2019/09/23/first-steps-using-netlify-and-angular/)
+- [Serverless Functions on Netlify Tutorial](https://explorers.netlify.com/learn/up-and-running-with-serverless-functions)
+- [Options for Integrating APIs into a Jamstack](https://www.raymondcamden.com/2019/07/25/multiple-ways-of-api-integration-in-your-jamstack)
+  - Direct call to the API
+  - Using a proxy/serverless function to encapsulate API credentials
+  - Calling the API during compile time to inject as a pre-render
 - [Feature Flag LaunchDarkly + Netlify](https://www.netlify.com/blog/2021/10/27/how-to-use-launchdarkly-feature-flags-with-netlify/)
+
+## TODO
+
+- [ ] Figure how to secure a serverless function since it's just a proxy to the real API.
+  - Are there rate limiting functions?
+  - Does Angular have built in ways to protect an API endpoint?
+
+## Commands
+
+Install Angular CLI and create project
+
+```bash
+npm install -g @angular/cli
+ng new static-poc
+```
+
+Install Netlify CLI and Login
+
+```bash
+npm install netlify-cli --global
+ntl login
+```
+
+Connect local project with Netlify
+
+```bash
+ntl init
+```
+
+Start development server (includes Angular + Serverless Functions)
+
+```bash
+ntl dev
+```
+
+Create a serverless function
+
+```bash
+ntl functions:create aloha-world
+```
 
 ---
 
