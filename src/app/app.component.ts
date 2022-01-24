@@ -19,6 +19,11 @@ export class AppComponent {
     this.http.get<ApiResponse>('/.netlify/functions/aloha-world')
       .subscribe((data: ApiResponse) => this.apiResponse = data.message);
   }
+
+  public fetchPokemon(): void {
+    this.http.get<ApiResponse>('/.netlify/functions/pokemon-lookup')
+      .subscribe((data: ApiResponse) => this.apiResponse = data.message);
+  }
 }
 
 export interface ApiResponse {
