@@ -353,6 +353,18 @@
   <button (click)="fetchData()">Get Time</button>
   <button (click)="fetchPokemon()">Get a Pokemon</button>
   <div>{{ apiResponse }}</div>
+  <div>
+    <ul>
+      <li><b>Feature</b>: Show Pikachu Image (<a href=".">50% Chance; Try Again</a>)</li>
+      <li><b>Flag Name</b>: pokemon_image</li>
+      <li><b>Flag Status</b>: {{ featureFlagToggle ? 'true' : 'false' }}</li>
+    </ul>
+    <div style="text-align: center;">
+      <img
+        *ngIf="featureFlagToggle"
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pikachu">
+    </div>
+  </div>
 
   <!-- Resources -->
   <h2>Resources</h2>

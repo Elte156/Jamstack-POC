@@ -25,7 +25,12 @@ This single page application has two buttons available on the index page: `Get T
 
 ### Feature Flags
 
-TBD
+Currently using [Split](https://www.split.io/) to implement feature flagging.
+
+- A flag called `pokemon_image` was created in their [interface](https://app.split.io/) to return `on` or `off`.
+- When turned `on`, an image of Pikachu is visible on the page.
+- Demo shows a 50% chance for the wild Pokemon to appear (showcasing the traffic percentage allocation)
+- Check JS Console to see Split SDK events
 
 ## Resources
 
@@ -36,6 +41,9 @@ TBD
   - Using a proxy/serverless function to encapsulate API credentials
   - Calling the API during compile time to inject as a pre-render
 - [Feature Flag LaunchDarkly + Netlify](https://www.netlify.com/blog/2021/10/27/how-to-use-launchdarkly-feature-flags-with-netlify/)
+  - No free trial offered; Going to try out Split.io
+- [Feature Flag Split.io Angular Tutorial](https://www.split.io/blog/continuous-deployment-in-angular/)
+  - [Sample Angular + Split.io Project](https://github.com/splitio-examples/split-angular-basketball-app-example)
 
 ## TODO
 
