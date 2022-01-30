@@ -10,7 +10,7 @@ import { SplitService } from './splitio.service';
 export class AppComponent implements OnInit, OnDestroy {
   public static readonly FEATURE_FLAG_POKEMON_IMAGE = 'pokemon_image';
 
-  title = 'static-poc';
+  title = 'Jamstack POC';
   apiResponse = '';
   featureFlagToggle = false;
 
