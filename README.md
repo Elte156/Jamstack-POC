@@ -44,6 +44,10 @@ Currently using [Split](https://www.split.io/) to implement feature flagging.
   - No free trial offered; Going to try out Split.io
 - [Feature Flag Split.io Angular Tutorial](https://www.split.io/blog/continuous-deployment-in-angular/)
   - [Sample Angular + Split.io Project](https://github.com/splitio-examples/split-angular-basketball-app-example)
+- [Three Different Approaches to Feature Flagging](https://danielk.tech/home/add-feature-toggling-to-your-angular-app-the-ultimate-guide-2021)
+  - Angular's Environment.ts (Rebuild Required)
+  - Static Assets JSON file (Can edit file on a live server)
+  - HTTP called Remote JSON file (Hosted on Git and read before rendering)
 
 ## TODO
 
